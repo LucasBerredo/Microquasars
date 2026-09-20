@@ -1,0 +1,79 @@
+\section{Línea temporal de vida}
+
+\noindent El objetivo de esta sección será describir a grandes rasgos la línea temporal que habita un microcuásar. Partiendo de los requisitos, su origen, los estados durmientes y activos, y su fin. En particular, se dejará la mayor parte del estado activo a la sección siguiente, <<El ciclo de estados espectrales>>.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[
+  node distance=0.6cm and 0.5cm,
+  every node/.style={
+    draw, 
+    font=\tiny, 
+    rounded corners=2pt, 
+    inner sep=3pt, 
+    align=center,
+    minimum height=11pt,
+  },
+  arrow/.style={-Stealth}
+]
+
+\node (node1) [text width=100pt] {Requisito - Sistema binario masivo};
+
+\node (node2) [below=of node1, text width=100pt] {Origen - Supernova};
+
+\node (node3) [below right=10pt and -20pt of node2, text width=100pt] {Colapso del núcleo};
+
+\node (node4) [below right=30pt and -20pt of node2, text width=100pt] {Supervivencia};
+
+\node (node5) [below=50pt of node2, text width=100pt] {Sistema binario durmiente};
+
+\node (node6) [below=of node5, text width=100pt] {Microcuásar activo};
+
+\node (node7) [below right=10pt and -20pt of node6, text width=100pt] {Roche-Lobe / Recepción vientos solares};
+
+\node (node8) [below right=30pt and -20pt of node6, text width=100pt] {Diagrama Intensidad-Dureza};
+
+\node (node9) [below=50pt of node6, text width=100pt] {Etapas finales};
+
+\node (node10) [below right=10pt and -20pt of node9, text width=100pt] {Fin de \textit{jets} relativistas};
+
+\node (node11) [below right=30pt and -20pt of node9, text width=100pt] {Muerte de estrella};
+
+\node (node12) [below right=50pt and -20pt of node9, text width=100pt] {Unifiación del sistema};
+
+\draw [arrow] (node1.south) -- (node2.north);
+
+\draw [arrow, color=blue!65!black] (node2.south) |- (node3.west);
+
+\draw [arrow, color=blue!65!black] (node2.south) |- (node4.west);
+
+\draw [arrow] (node2.south) -- (node5.north);
+
+\draw [arrow] (node5.south) -- (node6.north);
+
+\draw [arrow, color=blue!65!black] (node6.south) |- (node7.west);
+
+\draw [arrow, color=blue!65!black] (node6.south) |- (node8.west);
+
+\draw [arrow] (node6.south) -- (node9.north);
+
+\draw [arrow, color=blue!65!black] (node9.south) |- (node10.west);
+
+\draw [arrow, color=blue!65!black] (node9.south) |- (node11.west);
+
+\draw [arrow, color=blue!65!black] (node9.south) |- (node12.west);
+
+\end{tikzpicture}
+\caption{Línea del tiempo representando la vida de un microcuásar.}
+\end{figure}
+
+
+\subsection{Requisitos para formación}
+
+\subsection{Origen mediante supernova}
+
+\subsection{Sistema binario durmiente}
+
+\subsection{Etapa activa y dependencias}
+
+\subsection{Desmantelamiento sistémico}

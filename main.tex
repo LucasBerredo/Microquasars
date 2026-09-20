@@ -1,4 +1,7 @@
 \documentclass[twoside, 11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
 \usepackage[a4paper,  left=1in, right=1in, top=1in, bottom=1in, includehead, headheight=14mm]{geometry}
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
@@ -7,7 +10,10 @@
 \usepackage[pdfusetitle]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{lipsum}
+\usepackage{tikz}
+\usepackage{csquotes}
 
+\usetikzlibrary{positioning, arrows.meta}
 
 \hypersetup{colorlinks=true, linkcolor=black, urlcolor=black}
 
@@ -66,13 +72,30 @@
 \include{introduccion.tex}
 
 
+% \section{Línea temporal de vida}
+%%%%%%%%%%%%%% SUBSECCIONES %%%%%%%%%%%%%%
+%                                        %
+% Requisitos para formación              %
+% Origen mediante supernova              %
+% Sistema binario durmiente              %
+% Etapa activa y dependencias            %
+% Desmantelamiento sistémico             %
+%                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{linea_tiempo_vida.tex}
+
+
+
+
 % \section{Ciclo de estados espectrales}
 \include{estados_espectrales.tex}
-
+%%%%%%%%%%%%%% SUBSECCIONES %%%%%%%%%%%%%%
+% Diagrama HID                           %
+%                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \section{Experimentos numéricos}
 \include{exp_numericos.tex}
-
 
 
 % \section{Conclusiones}
