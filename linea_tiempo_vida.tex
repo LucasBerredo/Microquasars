@@ -1,6 +1,8 @@
 \section{Línea temporal de vida}
 
-\noindent El objetivo de esta sección será describir a grandes rasgos la línea temporal que habita un microcuásar. Partiendo de los requisitos, su origen, los estados durmientes y activos, y su fin. En particular, se dejará la mayor parte del estado activo a la sección siguiente, <<El ciclo de estados espectrales>>.
+\noindent El objetivo de esta sección será describir a grandes rasgos la línea temporal que habita un microcuásar. Partiendo de los requisitos, su origen, los estados durmientes y activos, y su fin. En particular, se dejará la mayor parte del estado activo a la sección siguiente, <<El ciclo de estados espectrales>>. 
+
+Debido al flujo de la literatura, esta sección será más genérica a sistemas binarios de rayos X, sistemas binarios con agujeros negros, y centralmente, LMXB (Binarios de rayos X de baja masa, \textit{Low Mass X-ray Binaries}). El estudio de estos cuerpos es una superclase al estudio de los microcuásarses, y por tanto no deja de ser relevante.
 
 \begin{figure}[h]
 \centering
@@ -17,7 +19,7 @@
   arrow/.style={-Stealth}
 ]
 
-\node (node1) [text width=100pt] {Requisito - Sistema binario masivo};
+\node (node1) [text width=100pt] {Requisitos - Sistema \\binario masivo};
 
 \node (node2) [below=of node1, text width=100pt] {Origen - Supernova};
 
@@ -29,7 +31,7 @@
 
 \node (node6) [below=of node5, text width=100pt] {Microcuásar activo};
 
-\node (node7) [below right=10pt and -20pt of node6, text width=100pt] {Roche-Lobe / Recepción vientos solares};
+\node (node7) [below right=10pt and -20pt of node6, text width=100pt] {Roche-Lobe / Vientos solares};
 
 \node (node8) [below right=30pt and -20pt of node6, text width=100pt] {Diagrama Intensidad-Dureza};
 
@@ -68,11 +70,161 @@
 \end{figure}
 
 
-\subsection{Requisitos para formación}
+\subsection{Requisitos para formación. Origen.}
+% Otras citas: Fryer, C. L., & Kalogera, V. (2001). "Theoretical Black Hole Mass Distributions."
+% Intro
+\noindent Se pueden reconocer dos grandes casos para la formación de binarios con agujeros negros. En el primero se parte de un binario de estrellas, de las cuales una colapsa, dando lugar al binario de agujero negro y estrella. La otra manera, primogénea, parte de \textit{clusters} globulares, los cuales dan lugar al binario directamente. Deberán ser descritos por separado, pues aunque una alteración del segundo pueda dar lugar al primero, el camino que toman es cualitativamente diferente.
 
-\subsection{Origen mediante supernova}
+
+\subsubsection*{Binarios de dos estrellas.}
+% Caso 1: Dos estrellas -> Binario de agujero negro
+% Basado en Podsiadlowski, P., Rappaport, S., & Han, Z. (2003). "On the Binary Initial-to-Final Mass Relation and the Formation of Low-Mass Black-Hole Binaries."
+\noindent Se considera un binario formado por una estrella principal y otra secundaria. Al comenzar una transfusión de masa de la primaria a la secundaria, si el periodo oscila entre 1 y 10 años, existe la posibilidad de crear un fondo compartido, cebado del envoltorio rico en hidrógeno de la primaria. En el caso de que en este proceso ambas estrellas eviten colisionar, se puede formar un cuásar.
+
+Las ontologías tradicionales suponían que para que este proceso tuviera lugar, alguna de las estrellas debía ser masiva ($\sim 20M_{\odot}$), sin embargo, desde el principio del milenio ha sido comprobado que esto no es imperiosamente necesario. En efecto, existen sistemas como {\color{red} BUSCAR EJEMPLO}, donde la masa de la secundaria está en el intervalo $[2M_{\odot}, 5M_{\odot}]$, ó con periodos mayores, superiores a $2,5$ días. Los LMXB aparecen con masas menores a $\sim 1,5M_{\odot}$.
+
+Los supuestos para este modelo son racionales. En el ejemplo del artículo citado, las masas iniciales siguen una distribución
+
+\begin{equation}
+\frac{dN}{dM_p}\propto M_p^{2,35}.
+\end{equation}
+
+\noindent Esto propone ciertas restricciones, como que la masa del principal debe ser mayor de $25M_{\odot}$. También se supone que sea menor de $45M_{\odot}$, para evitar complicaciones. La masa de la secundaria debe seguir la fórmula
+
+\begin{equation}
+f(M_s/M_p)=1, 
+\end{equation}
+
+\noindent que también excluye aquellos sitemas con $M_s<0,5M_{\odot}$. En cuanto al periodo de órbita, éste debe ser $\log$-constante. En cierta manera, esto induce el hecho de que las órbitas sean circulares, que es otro supuesto. El trabajo también tiene en cuenta los radios estelares. En particular, para radios mayores que $1000R_{\odot}$, los vientos solares pueden ser excesivos e influir a los resultados. 
+
+Existen otras condiciones más particulares para la formación de un cuásar mediante este modelo. En particular, la prescripción HPT debe ser válida y la órbita varía debido a los vientos solares mediante
+
+\begin{equation}
+\frac{da}{dt}=-\frac{dM_w}{M_p+M_s}.
+\end{equation}
+
+\noindent Una vez dados estos supuestos, el entorno común se forma si la estrella primaria alcanza distancia de Hertzprung (HG) y $M_p>2M_s$ ó (HG) está superada y $M_p>1.2M_s$. Los cuerpos se separarán según
+
+\begin{equation}
+\frac{a_f}{a_i}=\frac{M_cM_s}{M_p}\left(M_s+\frac{2M_e}{\lambda r_L}\right)^{-1},  
+\end{equation}
+
+\noindent donde $M_c$ es la masa del núcleo del primario, $M_e$ la masa del entorno, y $\lambda$ es un parámetro de fijación. Si se evita la colisión entre ambos entes, se forma un agujero negro con núcleo
+
+\begin{equation}
+M_{BH}=6M_{\odot}+(M_{\mbox{He}}-6M_{\odot})\mathcal{U}_{[0,1]}. 
+\end{equation}
+
+\noindent El resto de la evolución será el colapso del helio, la formación de supernova. Si la masa de la secundaria es menor que la del agujero negro, la transferencia de masa de Roche-Lobe es dinámicamente estable.
+
+\subsubsection*{Clusters globulares.}
+% Caso 2: Clusters globulares
+% Basado en Black hole binaries dynamically formed in globular clusters -- Dawoo Park, Chunglee Kim, Hyung Mok Lee, Yeong-Bok Bae and Krzysztof Belczynski
+\noindent La mayor parte de los binarios con agujeros negros probablemente no fueron formados mediante acreción en binarios de dos estrellas, sino que parten de un medio cósmico con $N$ cuerpos, que mediante colisiones forman el agujero negro. Sin embargo, este método es de complejidad matemática superior, por lo que todos los resultados provienen no de análisis, sino de simulación condicional sobre datos experimentales (como LIGO).
+
+Se distinguen dos casos para la creación de agujeros negros binarios: primordiales y dinámicos. Los primordiales son aquellos que provienen de un binario estelar, en el que una estrella colapsa, y los \textit{kicks} de la supernova hacen separar a la otra estrella del campo gravitacional. Los dinámicos, en cambio, se forman por colisiones en el problema de los tres cuerpos, y eyecciones mediante retroceso.
+
+Naturalmente, como no se conocen ecuaciones empíricas para este modelo, hay un menor número de resultados en la bibliografía. El número de uniones viene dado por
+
+\begin{equation}
+\gamma=\gamma_{\mbox{dyn}}+\gamma_{\mbox{pri}}=A\left(\frac{M_{\mbox{tot}}}{10^5M_{\odot}}\right)\left(\frac{\rho_h}{10^5M_{\odot}\mbox{pc}^{-3}}\right)^{\alpha}+B\frac{M_{\mbox{tot}}}{10^5M_{\odot}}f_{b,0}
+\end{equation}
+
+\noindent donde $\rho_h$ es la densidad media en medio radio, y $f_{b,0}$ es la fracción binaria primordial. El resto de parámetros son ajustados mediante regresión.
+
+\vspace{2em}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[>=Stealth, font=\sffamily]
+
+\begin{scope}[xshift=0cm]
+    \node[above=1.4cm, font=\bfseries] at (-0.3,0) {Binaria primordial};
+    
+    \draw[dash pattern=on 2.5pt off 2pt, line width=0.6pt] 
+      (-0.45, 0) to[out=135, in=0] (-1.2, 0.6)
+      arc (90:270:0.6)
+      to[out=0, in=225] (-0.45, 0);
+
+    \draw[dash pattern=on 2.5pt off 2pt, line width=0.6pt] 
+      (-0.45, 0) to[out=45, in=180] (0.5, 1.2)
+      arc (90:-90:1.2)
+      to[out=180, in=-45] (-0.45, 0);
+
+    \fill (-1.2, 0) circle (2.2pt);
+    \fill (0.5, 0) circle (6.5pt);
+  \end{scope}
+
+  \draw[->, line width=0.7pt] (1.9, 0) -- (2.6, 0);
+
+  \begin{scope}[xshift=4.6cm]
+    \node[above=1.4cm, font=\bfseries] at (-0.3,0) {Roche-lobe};
+    
+    \fill[shading=diffusestar] (0.5, 0) circle (1.1);
+
+    \draw[dash pattern=on 2.5pt off 2pt, line width=0.6pt] 
+      (-0.45, 0) to[out=135, in=0] (-1.2, 0.6)
+      arc (90:270:0.6)
+      to[out=0, in=225] (-0.45, 0);
+
+    \draw[dash pattern=on 2.5pt off 2pt, line width=0.6pt] 
+      (-0.45, 0) to[out=45, in=180] (0.5, 1.2)
+      arc (90:-90:1.2)
+      to[out=180, in=-45] (-0.45, 0);
+
+    \fill (-1.2, 0) ellipse (0.38 and 0.08);
+    \fill (-1.2, 0) circle (1.8pt);
+    \draw[line width=0.7pt] (-0.45, 0) to[out=180, in=0] (-0.85, -0.02);
+    \fill (0.5, 0) circle (6.5pt);
+  \end{scope}
+
+  \draw[->, line width=0.7pt] (6.7, 0) -- (7.4, 0);
+
+  \begin{scope}[xshift=9.2cm]
+    \node[above=1.4cm, font=\bfseries] at (0,0) {Espiral};
+    
+    \fill[shading=diffusestar] (0, 0) circle (1.15);
+    \fill (0, 0) circle (7pt);
+    \draw[line width=0.6pt] (0, 0) ellipse (0.85 and 0.8);
+    \fill (-0.5, 0.65) circle (2.6pt);
+  \end{scope}
+
+  \draw[->, line width=0.7pt] (10.65, 0.35) -- (11.35, 0.85);
+  \draw[->, line width=0.7pt] (10.65, -0.35) -- (11.35, -0.85);
+
+  \begin{scope}[xshift=11.9cm, yshift=0.9cm]
+    \begin{scope}[scale=0.6]
+      \draw[line width=0.6pt] 
+        (-0.25, 0) to[out=135, in=0] (-0.7, 0.35)
+        arc (90:270:0.35)
+        to[out=0, in=225] (-0.25, 0);
+
+      \draw[line width=0.6pt] 
+        (-0.25, 0) to[out=45, in=180] (0.4, 0.65)
+        arc (90:-90:0.65)
+        to[out=180, in=-45] (-0.25, 0);
+
+      \fill (-0.7, 0) circle (2.2pt);
+      \fill (0.4, 0) circle (4.5pt);
+    \end{scope}
+    \node[anchor=west, font=\small\bfseries] at (0.7, 0) {Binario compacto};
+  \end{scope}
+
+  \begin{scope}[xshift=11.9cm, yshift=-0.9cm]
+    \fill (0.1, 0) circle (3pt);
+    \node[anchor=west, font=\small\bfseries] at (0.7, 0) {Estrella aislada};
+  \end{scope}
+
+\end{tikzpicture}
+\caption{Recreado desde XiangDong 2010.}
+\end{figure}
+
+\vspace{1em}
 
 \subsection{Sistema binario durmiente}
+
+
+
 
 \subsection{Etapa activa y dependencias}
 
