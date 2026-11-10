@@ -1,1 +1,78 @@
 \section{Etapa activa. El ciclo de estados espectrales}
+\subsection{Mecanismos radiativos y componentes espectrales del sistema disco-corona-\textit{jet}}
+La distribución espectral de energía de un microcuásar, desde las ondas de radio hasta los rayos $\gamma$ es el resultado de la superposición e interacción radiativa de las siguientes componentes:
+
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{XTEJ1118+480.png}
+        \caption{Distribución espectral de energía de XTE J1118+480 durante su estallido de 2000.}
+        \label{fig:xte1118}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{CygnusX1_2.png}
+        \caption{Espectro promediado en el tiempo de Cygnus X-1 obtenido con INTEGRAL durante una mini-transición de estado (estado intermedio).}
+        \label{fig:cygnusx1}
+    \end{subfigure}
+    
+    \caption{Distribuciones espectrales de energía de microcuásares \cite{malzac}.}
+    \label{fig:microcuasares_espectros}
+\end{figure}
+
+\begin{enumerate}
+    \item \textbf{Emisión térmica multicolor del disco de acreción frío}. Un disco delgado y ópticamente grueso emite térmicamente como cuerpo negro multicolor con perfil $T_{eff}(r)\propto r^{-3/4}$, alcanzando su temperatura máxima en el radio interno $R_{in}$:
+    \begin{enumerate}
+        \item No truncado ($R_{in} = R_{ISCO}$). Alcanza $k_B T_{in} \sim 0.5 - 1.2$ keV y domina la emisión en rayos X blandos \cite{fender_gallo,malzac}.
+        \item Truncado ($R_{in} \sim 10^2 - 10^4\,R_g$). Su temperatura cae a $k_B T_{in} \lesssim 0{,}1$ keV, desplazando su pico al ultravioleta u óptico \cite{fender_gallo,mornas2026bloque1}.
+    \end{enumerate}
+    \item \textbf{Comptonización inversa en la corona de plasma caliente}. Los electrones calientes de la corona ($k_B T_e \sim 50 - 130$ keV \cite{fender_gallo,malzac}) transfieren energía a fotones semilla mediante comptonización inversa, generando un espectro de rayos X duros en ley de potencias ($N(E) \propto E^{-\Gamma}$) \cite{malzac}:
+    \begin{enumerate}
+        \item Distribución térmica (maxwelliana): Produce un corte exponencial a altas energías en $E_{cut} \sim 50 - 150$ keV (típico del estado duro).
+        \item Distribución no térmica o híbrida: Extiende la emisión de forma continua hasta varios MeV sin corte brusco (típico del estado blando e intermedio). 
+    \end{enumerate}
+    \item \textbf{Reflexión en el disco frío, joroba Compton y línea relativista Fe $K_\alpha$}. Los rayos X duros de la corona iluminan el disco frío \cite{malzac}, donde la absorción fotoeléctrica ($E \lesssim 10$ keV) y la retrodispersión Compton ($E \gtrsim 50$ keV) originan la joroba de reflexión Compton ($20 - 40$ keV). Este proceso genera además la línea fluorescente de hierro (Fe $K_\alpha$ a $6.4$ keV) \cite{mirabel,malzac}, cuyo perfil se ensancha y distorsiona asimétricamente por efectos Doppler relativistas y desplazamiento al rojo gravitacional si la reflexión ocurre cerca del agujero negro.
+    \item \textbf{Emisión sincrotrón de banda ancha del \textit{jet} relativista}. Electrones relativistas generan radiación sincrotrón en el campo magnético del \textit{jet}. Debido a la autoabsorción en el chorro cónico en expansión, la superposición de capas produce un espectro plano ($S_\nu \sim$ cte) desde radio hasta un quiebre espectral (\textit{jet break}) en el rango milimétrico o infrarrojo ($\nu_b \sim 10^{11} - 10^{14}$ Hz), a partir del cual el plasma se vuelve ópticamente delgado y el flujo decae hacia el óptico y rayos X \cite{fender_gallo,malzac}.
+\end{enumerate}
+
+\subsection{Los Estados Duro y Blando (LHS y HSS)}
+Una misma fuente puede observarse habitualmente en uno de dos estados espectrales cuasi-estacionarios cuyas diferencias reflejan cambios profundos en la geometría del flujo de acreción \cite{malzac}:
+\begin{itemize}
+    \item[$\bullet$] \textbf{El Estado Alto/Blando (HSS)}. Ocurre a altas luminosidades y se caracteriza por tres propiedades fundamentales:
+    \begin{enumerate}
+        \item Emisión térmica dominante proveniente del disco (con pico en $\sim 1$ keV) que genera intensas señales de reflexión.
+        \item Una cola de alta energía débil y no térmica que se extiende hasta el rango de MeV sin corte abrupto.
+        \item Presenta fluctuaciones mínimas en rayos X y es radio-silencioso (sin \textit{jet}).
+    \end{enumerate}
+    Consiste en un disco geométricamente delgado y ópticamente grueso que se extiende de forma ininterrumpida hasta la última órbita estable. Sobre y bajo el disco se forma una Corona de Disco de Acreción (ADC) mediante reconexión magnética. Dicha reconexión acelera electrones relativistas que enfrían dispersando fotones del disco por efecto Compton inverso, lo que origina la emisión en MeV y la reflexión sobre el disco. Se descarta el modelo alternativo de Comptonización por movimiento convergente porque predice erróneamente un corte espectral a $\sim 100$ keV, incapaz de explicar la emisión detectada en MeV.
+    \item[$\bullet$] \textbf{El Estado Bajo/Duro (LHS)}. Ocurre a bajas luminosidades y presenta propiedades opuestas al HSS:
+    \begin{enumerate}
+        \item Emisión térmica y reflexión mínimas. La radiación de cuerpo negro del disco es casi indetectable en rayos X.
+        \item Espectro duro dominante con un corte térmico exponencial claro entre 50 y 130 keV debido a Comptonización térmica por electrones a $T_e\sim10^9$ K.
+        \item Muestra una fuerte variabilidad rápida en rayos X y la presencia constante de un \textit{jet} compacto estacionario en radio.
+    \end{enumerate}
+    Su geometría se debate entre dos paradigmas principales: el flujo caliente truncado (ADAF/RIAF) y la corona dinámica en eyección (ADC):
+    \begin{enumerate}
+        \item \textbf{Escenario de disco truncado y flujo caliente}. El disco frío y delgado no llega a la última órbita estable ($R_{ISCO}$), sino que se trunca a una distancia de transición ($R_{tr} \sim 100 - 1000\, R_g$). En la zona interior ($r < R_{tr}$), el flujo adopta la forma de un toroide caliente, geométricamente grueso y ópticamente delgado. \\
+        La disipación viscosa calienta predominantemente a los iones hasta la temperatura del virial ($T_i \sim 10^{11} - 10^{12}$ K \cite{mornas2026bloque2}). Los electrones se enfrían de forma muy eficiente por Compton inverso de los fotones blandos y de emisión sincrotrón autoabsorbida. Como el plasma es caliente y poco denso, las colisiones coulombianas son ineficientes para transferir calor, manteniendo a los electrones en torno a $T_e \sim 10^9$ K ($\sim 100$ keV), lo que explica de forma natural el corte térmico observado. \\
+        El flujo se estabiliza cuando la energía térmica es advectada hacia el horizonte de sucesos (ADAF) o expulsada mediante vientos y flujos de salida (ADIOS). Ambos son flujos radiativamente ineficientes (RIAF). La debilidad de la reflexión y de la emisión térmica se explica porque el disco frío exterior queda lejos de la fuente central.
+        \item \textbf{Corona de disco dinámica en eyección (\textit{Outflowing} ADC)}. Se propone que el disco delgado y frío sí se extiende hasta cerca de $R_{ISCO}$, pero la energía de acreción es transportada magnéticamente hacia una corona activa superior y hacia el \textit{jet}, evitando que el disco se caliente y brille en rayos X. Este modelo está respaldado por la detección de líneas de hierro (Fe $K_\alpha$) ensanchadas relativisticamente (como en GX 339-4), las cuales exigen un disco frío muy próximo al agujero negro. \\
+        Una corona estática sufre una fuerte retroalimentación: emite rayos X isotrópicamente, la mitad ilumina el disco subyacente y este reemite fotones blandos que reingresan a la corona enfriándola en exceso. Incluso una ``corona parcheada'' (\textit{patchy}) en reposo predeciría una componente térmica y una reflexión ($R_{refl} \sim 1$) incompatibles con el LHS.
+        Si el plasma coronal se eyecta alejándose del disco a velocidades moderadamente relativistas ($v \sim 0.3c$): 
+        \begin{itemize}
+            \item[$\bullet$] El \textit{beaming} Doppler proyecta la radiación X hacia afuera, reduciendo drásticamente la fracción que intercepta el disco.
+            \item[$\bullet$] Se suprimen la emisión térmica reprocesada y la reflexión ($R_{refl} \ll 1$); la corona sufre menor enfriamiento Compton y retiene altas temperaturas ($T_e \sim 100$ keV); y se reproduce la correlación empírica observada entre la pendiente espectral $\Gamma$ y la amplitud de reflexión $R_{refl}$. 
+            \item[$\bullet$] La velocidad requerida ($0.3c$) coincide con la de los \textit{jets} de radio en el estado duro, lo que sugiere que esta corona en eyección constituye la base física desde donde se alimenta y acelera el \textit{jet} compacto.
+        \end{itemize}
+    \end{enumerate}
+\end{itemize}
+
+\subsection{El Diagrama Dureza-Intensidad (HID) y la evolución empírica del estallido}
+
+
+\subsection{Acoplamiento disco-corona-\textit{jet}}
+
+
+\subsection{El problema de la histéresis espectral y las propiedades de variabilidad rápida}
