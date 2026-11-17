@@ -2,21 +2,35 @@
 
 \noindent El objetivo de esta sección es realizar una serie de diagramas y resultados numéricos, partiendo de simulaciones o datos experimentales.
 
-\subsection{Recreación Diagrama Intensidad-Dureza}
+\subsection{Diagrama Intensidad-Dureza}
 
-% Descripción matemática del diagrama
-% Fuentes de datos experimentales
-% Implementación
-% Resultados
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.85\linewidth]{Figuras/Experimentos numéricos/hid_gx339_4.png}
+    \caption{Datos de RXTE/PCA, Belloni et al. 2005}
+\end{figure}
 
-\subsection{Cinemática de los \textit{jets}. Movimiento supralineal aparente.}
+\noindent Este diagrama pone de manifiesto el HID (\textit{Hardness-Intensity Diagram}) del microcuásar GX 339-4 durante su \textit{outburst} del 2002. A destacar:
 
-% Descricpión matemática del problema
-% Simulación
-% Resultados
+\begin{itemize}
+    \item Ciclo de histéresis antihorario a través de los 4 estados de acreción.
+    \item En la fase inicial, se tiene un crecimiento casi vertical. Efecto Compton inverso en un \textit{jet} cálido y compacto.
+    \item Al llegar al máximo de masa, transición horizontal al estado intermedio duro (HIMS). 
+    \item Cruza la línea de \textit{jets}, transicionando al estado intermedio blando (SIMS). Eyecciones balísticas ultrarrelativistas.
+    \item Estado Alto/Blando (HSS). Se llega a la órbita estable más cercana (ISCO). Se suprimen las emisiones de los \textit{jets}.
+    \item Cierre del ciclo: la transición del estado blando al débil ocurre con una intensidad $\sim15$ veces menor, con la evaporación de la corona y condensación.
+\end{itemize}
 
-\subsection{Difusión viscosa del disco de acreción}
 
-% Descripción matemática del problema
-% Método de resolución numérica de EDP
-% Resultados
+\subsection{Movimiento superlineal aparente.}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.85\linewidth]{Figuras/Experimentos numéricos/velocidad_superluminica.png}
+\end{figure}
+
+\noindent Esta figura compara la velocidad transversa aparente ($\beta_{\mbox{ap}}=v_{\mbox{ap}}/c$) versus la inclinación del \textit{jet} con respecto a la línea de vista a varias velocidades.
+
+La región sombreada de naranja se corresponde con la región de movimiento superlineal aparente. Sólo se puede acceder a esta región cuando la velocidad real supera $2^{-1/2}c\approx 0,7071c$. 
+
+Es de especial interés la línea negra discontinua, los máximos de la velocidad aparente. Ocurren cuando $\theta_{\max}=\beta$. A diferencia de los blázares, con $\beta_{\mbox{ap}}>>10c$, los microcuásares tienen velocidades superlumínicas pequeñas ($1-1.4c$)

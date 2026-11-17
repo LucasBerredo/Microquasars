@@ -6,7 +6,7 @@
 \usepackage[spanish]{babel}
 \usepackage{graphicx}
 \usepackage{subcaption}
-\usepackage{amssymb}
+\usepackage{amssymb, amsmath}
 \usepackage{ninecolors}
 \usepackage{titlesec}
 \usepackage[pdfusetitle]{hyperref}
@@ -19,7 +19,7 @@
 
 \usetikzlibrary{positioning, arrows.meta, fadings}
 
-\hypersetup{colorlinks=true, linkcolor=black, urlcolor=black}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=black, citecolor=black}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -40,13 +40,13 @@
 
 \begin{document}
 \pagenumbering{roman}
-\begin{titlepage}
-  \centering
+\thispagestyle{plain}
+  \begin{center}
   {\Huge Microcuásares\par}
 
   \vspace{5em}
 
-  \includegraphics[width=0.75\linewidth]{Emblema Universidad de Oviedo.jpg}\par
+  \includegraphics[width=0.75\linewidth]{Figuras/Emblema Universidad de Oviedo.jpg}\par
   \vspace{1em}
   {\huge \color{gray6} Facultad de Ciencias\par}
 
@@ -56,65 +56,41 @@
   \vspace{1em}
   {\Large Sánchez García, María José\par}
   \vspace{2em}
-\end{titlepage}
-
-\thispagestyle{plain}
-
-\noindent \textbf{Abstract.} \lipsum[1]
-
-\vspace{2em}
-
-\noindent \textbf{Resumen.} \lipsum[2]
+\end{center}
 
 \newpage
 
-\thispagestyle{plain}
+
+\noindent \color{white} \textbf{Resumen.} \lipsum[3]
+\vspace{-10em}
+% No entiendo por qué este lipsum tiene que estar ahí, pero si lo quito, no compila.
+% Salvo que quite el lipsum, y quite \include{linea_tiempo_vida}, entonces sí.
+% No vale con copiar y pegar el texto del lipsum.
+% No vale ponerlo dentro de un \phantom{}.
+% No vale con añadir un salto de página ó línea.
+% Nada.
+% Me estoy volviendo loco.
+
+\color{black}
+
+
 \tableofcontents
-\newpage
+
+\newpage 
 
 
 \pagenumbering{arabic}
 
-% \section{Introducción}
-%%%%%%%%%%%%%% SUBSECCIONES %%%%%%%%%%%%%%
-% Definición microcuásar                 %
-% Anatomía de un sistema binario         %
-%                                        %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{introduccion.tex}
 
+\include{introduccion}
+\include{linea_tiempo_vida}
+\include{estados_espectrales}
+\include{exp_numericos}
 
-% \section{Línea temporal de vida}
-%%%%%%%%%%%%%% SUBSECCIONES %%%%%%%%%%%%%%
-%                                        %
-% Requisitos para formación              %
-% Origen mediante supernova              %
-% Sistema binario durmiente              %
-% Etapa activa y dependencias            %
-% Desmantelamiento sistémico             %
-%                                        %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{linea_tiempo_vida.tex}
-
-
-
-
-% \section{Etapa activa. El ciclo de estados espectrales}
-\include{estados_espectrales.tex}
-%%%%%%%%%%%%%% SUBSECCIONES %%%%%%%%%%%%%%
-% Diagrama HID                           %
-%                                        %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \section{Experimentos numéricos}
-\include{exp_numericos.tex}
-
-
-% \section{Conclusiones}
-\include{conclusiones.tex}
+\include{conclusiones}
 
 % --- BIBLIOGRAFÍA ---
-\cleardoublepage
+\newpage
 \begin{thebibliography}{99}
 
 \bibitem{chaty}

@@ -1,10 +1,10 @@
-\section{Línea temporal de vida}
+  \section{Línea temporal de vida}
 
 \noindent El objetivo de esta sección será describir a grandes rasgos la línea temporal que habita un microcuásar. Partiendo de los requisitos, su origen, los estados durmientes y activos, y su fin. En particular, se dejará la mayor parte del estado activo a la sección siguiente, <<El ciclo de estados espectrales>>. 
 
 Debido al flujo de la literatura, esta sección será más genérica a sistemas binarios de rayos X, sistemas binarios con agujeros negros, y centralmente, LMXB (Binarios de rayos X de baja masa, \textit{Low Mass X-ray Binaries}). El estudio de estos cuerpos es una superclase al estudio de los microcuásarses, y por tanto no deja de ser relevante.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 \begin{tikzpicture}[
   node distance=0.6cm and 0.5cm,
@@ -69,73 +69,113 @@ Debido al flujo de la literatura, esta sección será más genérica a sistemas 
 \caption{Línea del tiempo representando la vida de un microcuásar.}
 \end{figure}
 
-
 \subsection{Requisitos para formación. Origen.}
-% Otras citas: Fryer, C. L., & Kalogera, V. (2001). "Theoretical Black Hole Mass Distributions."
-% Intro
-\noindent Se pueden reconocer dos grandes casos para la formación de binarios con agujeros negros. En el primero se parte de un binario de estrellas, de las cuales una colapsa, dando lugar al binario de agujero negro y estrella. La otra manera, primogénea, parte de \textit{clusters} globulares, los cuales dan lugar al binario directamente. Deberán ser descritos por separado, pues aunque una alteración del segundo pueda dar lugar al primero, el camino que toman es cualitativamente diferente.
 
-
-\subsubsection*{Binarios de dos estrellas.}
-% Caso 1: Dos estrellas -> Binario de agujero negro
-% Basado en Podsiadlowski, P., Rappaport, S., & Han, Z. (2003). "On the Binary Initial-to-Final Mass Relation and the Formation of Low-Mass Black-Hole Binaries."
-\noindent Se considera un binario formado por una estrella principal y otra secundaria. Al comenzar una transfusión de masa de la primaria a la secundaria, si el periodo oscila entre 1 y 10 años, existe la posibilidad de crear un fondo compartido, cebado del envoltorio rico en hidrógeno de la primaria. En el caso de que en este proceso ambas estrellas eviten colisionar, se puede formar un cuásar.
-
-Las ontologías tradicionales suponían que para que este proceso tuviera lugar, alguna de las estrellas debía ser masiva ($\sim 20M_{\odot}$), sin embargo, desde el principio del milenio ha sido comprobado que esto no es imperiosamente necesario. En efecto, existen sistemas como {\color{red} BUSCAR EJEMPLO}, donde la masa de la secundaria está en el intervalo $[2M_{\odot}, 5M_{\odot}]$, ó con periodos mayores, superiores a $2,5$ días. Los LMXB aparecen con masas menores a $\sim 1,5M_{\odot}$.
-
-Los supuestos para este modelo son racionales. En el ejemplo del artículo citado, las masas iniciales siguen una distribución
+\paragraph{Evoliución de estrellas masivas y límite de Eddington.} La formación del objeto compacto, motor del microcuásar requiere que la estrella primaria nazca en la ZAMS con una masa suficiente tal que entre en el ciclo CNO, i.e.,
 
 \begin{equation}
-\frac{dN}{dM_p}\propto M_p^{2,35}.
+  M\geq 8-10 M_{\odot}
 \end{equation}
 
-\noindent Esto propone ciertas restricciones, como que la masa del principal debe ser mayor de $25M_{\odot}$. También se supone que sea menor de $45M_{\odot}$, para evitar complicaciones. La masa de la secundaria debe seguir la fórmula
+\noindent De acuerdo con las ecuaciones de homología, las estrellas masivas tienen un núcleo convectivo (debido a que $\varepsilon_{\mbox{CNO}}\propto\rho T^{12}$, que produce una luminosidad central demasiado alta para ser evacuada únicamente por radiación, violando el Criterio de Estabilidad de Schwarzschild). La envoltura en cambio sí es radiativa, dominada por la dispersión de Thomson en los electrones libres. De esta forma, la relación masa-luminosidad es muy elevada ($L\propto M^3$), y la estrella vive poco tiempo en la ZAMS.
 
 \begin{equation}
-f(M_s/M_p)=1, 
+  \tau_{\mbox{nuc}}\sim \frac{\varepsilon M c^2}{L}\sim 10^6-10^7\mbox{ años}.
 \end{equation}
 
-\noindent que también excluye aquellos sitemas con $M_s<0,5M_{\odot}$. En cuanto al periodo de órbita, éste debe ser $\log$-constante. En cierta manera, esto induce el hecho de que las órbitas sean circulares, que es otro supuesto. El trabajo también tiene en cuenta los radios estelares. En particular, para radios mayores que $1000R_{\odot}$, los vientos solares pueden ser excesivos e influir a los resultados. 
-
-Existen otras condiciones más particulares para la formación de un cuásar mediante este modelo. En particular, la prescripción HPT debe ser válida y la órbita varía debido a los vientos solares mediante
+\noindent Estas estrellas, localizadas en la región de presión de radiación en el diagrama H-R, siguen la ecuación de estado
 
 \begin{equation}
-\frac{da}{dt}=-\frac{dM_w}{M_p+M_s}.
+  P_{\mbox{rad}}=\tfrac{1}{3}aT^4=(1-\beta)P.
 \end{equation}
 
-\noindent Una vez dados estos supuestos, el entorno común se forma si la estrella primaria alcanza distancia de Hertzprung (HG) y $M_p>2M_s$ ó (HG) está superada y $M_p>1.2M_s$. Los cuerpos se separarán según
+\noindent Debido a su masa, el índice adiabático tenderá hacia $4/3$, el umbral de inestabilidad. Así, es necesario imponer que la fuerza de atracción sea mayor que el gradiente de la presión de radiación. Se define la luminosidad de Eddington
 
 \begin{equation}
-\frac{a_f}{a_i}=\frac{M_cM_s}{M_p}\left(M_s+\frac{2M_e}{\lambda r_L}\right)^{-1},  
+  L_{\mbox{Edd}}=\frac{4\pi GMc}{\kappa}\approx\frac{4\pi GMm_pc}{\sigma_T}\approx 1,3\times10^{38}\left(\tfrac{M}{M_{\odot}}\right)\approx 3,2\times 10^4\left(\tfrac{M}{M_{\odot}}\right)L_{\odot}.
 \end{equation}
 
-\noindent donde $M_c$ es la masa del núcleo del primario, $M_e$ la masa del entorno, y $\lambda$ es un parámetro de fijación. Si se evita la colisión entre ambos entes, se forma un agujero negro con núcleo
+\noindent Esta magnitud acabará correspondiéndose con la unidad natural de luminosidad para microcuásares. 
+
+Para que el sistema binario acabe convirtiéndose en un microcuásar, la separación orbital debe de estar en un rango: suficientemente estrecha para que haya transmisión de masa desde la estrella al objeto compacto, pero sin que se fusionen al completo. 
+
+En el caso de que el binario tenga masas muy dispares (de al menos 25 órdenes de magnitud), se deberá cumplir una fase de envolutra común: la primaria en fase de supergigante engloba a la secundaria, y la fricción hidrodinámica extrae energía orbital. La secundaria se acaba expulsando de la envolvente, y dando lugar un sistema binario compacto, con un núcleo de helio (estrella de Wolf-Rayet), y una estrella de baja masa.
+
+Una vez agotado el hidrógeno en el centro de la primaria, se evita el \textit{flash} de helio mediante una emisión térmica de neutrinos. El núcleo encadena las siguientes reacciones:
+
+\vspace{-0.5em}
+
+\begin{enumerate}
+  \item Combustión nuclear de $\phantom{}^4\mbox{He}$ (reacción triple-$\alpha$, $T\geq 10^8\mbox{K}$)\vspace{-0.5em}
+  \item Combustión nuclear de $\phantom{}^{12}\mbox{C}$ ($T\in[5\times10^8, 10^9]K$, para una estrella de $25M_{\odot}$, $\sim600$ años)\vspace{-0.75em}
+  \item Combustión nuclear de $\phantom{}^{20}\mbox{Ne}$ ($\sim 1$ año)\vspace{-0.5em}
+  \item Combustión nuclear de $\phantom{}^{16}\mbox{O}$ ($T\geq1,4\times10^9\mbox{K}$, $\sim 0,5$ años)\vspace{-0.5em}
+  \item Combustión nuclear de $\phantom{}^{28}\mbox{Si}$ ($T\geq 2-4\times10^{9}\mbox{K}$, $\sim 1$ día)\vspace{-0.5em}
+\end{enumerate}
+
+\noindent Al llegar a los metales férreos ($\mbox{Fe, Ni}$), con energía de ligadura muy alta ($B/A\approx8,8\mbox{MeV}$), las reacciones dejarán de ser exotérmicas, y se empieza a consumir energía térmica.
+
+Consecuentemente, el núcleo de $\phantom{}^{56}\mbox{Fe}$, originalmente sostenido por la presión de los electrones degeneraods ultrarrelativistas ($\Gamma=4/3$), sigue creciendo, hasta el límite de Chandrasekhar
 
 \begin{equation}
-M_{BH}=6M_{\odot}+(M_{\mbox{He}}-6M_{\odot})\mathcal{U}_{[0,1]}. 
+  M_{\mbox{Ch}}=4\pi M\left[\tfrac{K}{\pi G}\right]^{3/2}=5,83\mu_e^{-2}M_{\odot}\approx 1,46 M_{\odot}
 \end{equation}
 
-\noindent El resto de la evolución será el colapso del helio, la formación de supernova. Si la masa de la secundaria es menor que la del agujero negro, la transferencia de masa de Roche-Lobe es dinámicamente estable.
+\noindent En este instante, se produce un colapso gravitatorio. El proceso de caída libre tiene una duración aproximada de $\tau_{\mbox{libre}}\sim100\mbox{ms}$. Esta desintegración es apoydada por dos fenómenos:
 
-\subsubsection*{Clusters globulares.}
-% Caso 2: Clusters globulares
-% Basado en Black hole binaries dynamically formed in globular clusters -- Dawoo Park, Chunglee Kim, Hyung Mok Lee, Yeong-Bok Bae and Krzysztof Belczynski
-\noindent La mayor parte de los binarios con agujeros negros probablemente no fueron formados mediante acreción en binarios de dos estrellas, sino que parten de un medio cósmico con $N$ cuerpos, que mediante colisiones forman el agujero negro. Sin embargo, este método es de complejidad matemática superior, por lo que todos los resultados provienen no de análisis, sino de simulación condicional sobre datos experimentales (como LIGO).
+\begin{enumerate}
+  \item \textbf{Fotodesintegración:} $\gamma+\phantom{}^{56}\mbox{Fe}\to13\phantom{}^4\mbox{He}+4n-124,4\mbox{MeV}$, $\gamma+\phantom{}^{4}\mbox{He}+2p+2n-28,3\mbox{MeV}$. Resultado: $\Gamma\lneq 4/3$.
+  \item \textbf{Captura electrónica (neutronización):} $p+e^-\to n+\nu_e$. Resultado: liberación de neutrinos, llevando potencial gravitatorio.
+\end{enumerate}
 
-Se distinguen dos casos para la creación de agujeros negros binarios: primordiales y dinámicos. Los primordiales son aquellos que provienen de un binario estelar, en el que una estrella colapsa, y los \textit{kicks} de la supernova hacen separar a la otra estrella del campo gravitacional. Los dinámicos, en cambio, se forman por colisiones en el problema de los tres cuerpos, y eyecciones mediante retroceso.
+\noindent Cómo finaliza este colapso indica la naturaleza del microcuásar.
 
-Naturalmente, como no se conocen ecuaciones empíricas para este modelo, hay un menor número de resultados en la bibliografía. El número de uniones viene dado por
+\paragraph{Caso 1. \textit{Natal kick}.} Cuando la masa de las progenitoras a edad $0$ está entre $8M_{\odot}$ y $40M_{\odot}$ y $\rho\sim 2-3\rho_0$, los nucleones forman un líquido de Fermi. Éste queda gobernado por la ecuación de Tolman-Oppenheimer-Volkoff:
 
 \begin{equation}
-\gamma=\gamma_{\mbox{dyn}}+\gamma_{\mbox{pri}}=A\left(\frac{M_{\mbox{tot}}}{10^5M_{\odot}}\right)\left(\frac{\rho_h}{10^5M_{\odot}\mbox{pc}^{-3}}\right)^{\alpha}+B\frac{M_{\mbox{tot}}}{10^5M_{\odot}}f_{b,0}
+  \tfrac{dP}{dr}=-\frac{Gm(r)\rho(r)}{r^2}\left[1+\frac{P(r)}{\rho(r)c^2}\right]\left[1+\frac{4\pi r^3 P(r)}{m(r)c^2}\right]\left[1-2\frac{Gm(r)}{rc^2}\right]^{-1}.
 \end{equation}
 
-\noindent donde $\rho_h$ es la densidad media en medio radio, y $f_{b,0}$ es la fracción binaria primordial. El resto de parámetros son ajustados mediante regresión.
+\noindent Las capas externas rebotan sobre el núcleo rígido, generando una onda de choque que expulsa a las exteriores, es decir, una supernova de colapso del núcleo. (En efecto, será de tipo II si conservaba $\mbox{H}$, ó Ib/Ic si no). Queda restante una estrella de neutrones $M\sim2M_{\odot}$ o un agujero negro de baja masa. Este último caso se llama \textit{fallback}, y ocurre cuando la caída del material supera el límite de TOV.
 
-\vspace{2em}
+Apelando a la <<Arqueología Galáctica>> \cite{mirabel}, la eyección de masa mediante el efecto Blaauw y acumulación de asimetrías hidrodinámicas conllevnan un fuerte impulso al centro de masas, conocido como \textit{Natal kick}. 
+
+
+\paragraph{Caso 2. Colapso directo.} Cuando la masa en la ZAMS supera $25-40M_{\odot}$ y se tiene una baja metalizidad, el núcleo de hierro supera directamente el límite de estabilidad de TOV. La onda de choque fracasa, la estrella implosiona sin producir una supernova luminosa ni expulsar una cantidad de masa significativa.
+
+Los sistemas binarios resultantes tienen velocidades extremadamante bajas, normalmente asociados a rotación galáctica. Sus agujeros negros fueron formados por colapso directo. 
+
+Si la estrella tuviera momento angular previo, se formarán tanto un agujero negro como un disco de acreción ultradenso, expulsando chorros ultrarrelativistas que perforan la estrella primaria. Esta es perforada, y se produce un estallido de rayos gamma de larga duración.
+
+
+\subsection{Sistema binario durmiente}
+
+\noindent Si el sistema binario se ha formado de manera correcta y no colapsa, se puede permanecer una cantidad de tiempo indeterminada (y posiblemente muy larga) en un estado durmiente (también conocido como estado de quiesencia). En el caso particular de las binarias de rayos X de rayos X (LMXB), esta será la etapa más larga de su vida útil. 
+
+Los episodios de alta intensidad (\textit{outbursts}) duran unos meses, y van intercalados por intervalos de recurrencia de años o décadas. 
+
+En este periodo, el ritmo de transferencia es extremadamente bajo, 
+
+\begin{equation}
+  L_X\sim 10^{-8,5}-10^{-6,5}L_{\mbox{Edd}}.
+\end{equation}
+
+\noindent Según Malzac \cite{malzac}, el disco de acreción se halla a una gran distancia del agujero negro, mientras que la región interna contiene un flujo caliente advectivo tenue e ineficiente. (ADAF, RIAF).
+
+Para activar un microcuásar durmiente, uno debe referirse al modelo de Meyer-Hofmeister, basado en la inestabilidad térmica-viscosa asociada a la ionización del hidrógeno en el disco de acreción. Los pasos a seguir son:
+
+\begin{enumerate}
+  \item El gas transferido desde la secundaria hasta la primaria se acumula en las regiones externas del disco. El hidrógeno está en el estado neutro de la ecuación de Saha. La viscosidad efectiva es minúscula, el flujo entrante sobrepasa al cebado del núcleo.
+  \item Según la masa se acumula en el exterior, crece la densidad y temperatura. Entorno a los $6000$ ó $10000$ Kelvin, se ioniza el hidrógeno.
+   
+  En este régimen, la opacidad de Rosseland aumenta (debido a $\mbox{H}^-$ y las transiciones \textit{bb}). Además, el índice adiabático ($\Gamma=\partial_{\rho}\ln P$) cae: $4/3\to 1,2$, provocando inestabilidad convectiva.
+  \item Cuando $T\geq 10^4\mbox{K}$, el gas está totalmente ionizado. El acoplamiento magnético del con el plasma dispara la viscosidad. Se desencadena una avalancha de materia, aumentando la tasa de acreción y la luminosidad. 
+\end{enumerate}
+
 
 \begin{figure}[h]
 \centering
+\makebox[\textwidth][c]{
 \begin{tikzpicture}[>=Stealth, font=\sffamily]
 
 \begin{scope}[xshift=0cm]
@@ -215,17 +255,48 @@ Naturalmente, como no se conocen ecuaciones empíricas para este modelo, hay un 
     \node[anchor=west, font=\small\bfseries] at (0.7, 0) {Estrella aislada};
   \end{scope}
 
-\end{tikzpicture}
+\end{tikzpicture}}
 \caption{Recreado desde XiangDong 2010.}
 \end{figure}
 
 \vspace{1em}
 
+\subsection{Etapa activa}
 
-\subsection{Etapa activa y dependencias}
+\noindent Se refiere al lector a la sección siguiente.
 
-\noindent Como fue augurado anteriormente, esta subsección queda relegada al siguiente capítulo, para tratarlo con la expansión debida.
+
 
 \subsection{Desmantelamiento sistémico}
+
+\noindent La etapa activa concluye cuando el suministro de materia de la estrella secundaria acaba. La estructura disco-corona-\textit{jet} se desmantela sistémicamente. Existen dos mecanismos posibles para esto, dependiendo de la masa restante.
+
+\begin{enumerate}
+  \item \textbf{LMXB:} La estrella donante pierde su envoltura de $\mbox{H}$. El núcleo remanante se enfría como una enana blanca, dejando un sistema binario pasivo: una enana blanca y un agujero negro/púlsar.
+  \item \textbf{HMXB:} En binarias de alta masa (p.ej. Cygnus X-1, Cygnus X-3), la estrella donante (O/B/Wolf-Rayet) agota su combustible nulcear y se colapsa el núcleo por la fuerza gravitatoria. Si la pérdida de masa o el segundo \textit{Natal Kick} (esta vez asimétrico) supera la energía de ligadura, el sistema presenta una disrupción. Ambos compactos son disparados al espacio interestelar, en distintos caminos con altas velocidades. Si no se desligan, se forma un binario de dos objetos compactos: NS-NS (PSR 1913+16), púlsar doble (J0737-3039), NS+BH ó BH+BH.
+\end{enumerate}
+
+\noindent A partir de este momento, la evolución final es gobernada por la relatividad general. El momento cuadripolar de ambas masas compactas,
+
+\begin{equation}
+  Q_{ij}=\int\rho(x)(x_ix_j-\tfrac{1}{3}r^2\delta_{ij})dx
+\end{equation}
+
+\noindent da lugar a ondas gravitacionales. Su potencia cuadripolar es
+
+\begin{equation}
+  L_{GW}=\tfrac{1}{5}\tfrac{G}{c^2}\left\langle \dddot{Q}_{ij}, \dddot{Q}^{ij}\right\rangle\sim \frac{c^5s^2}{G}\left(\frac{R_S}{R}\right)^2\left(\frac{v}{c}\right)^6.
+\end{equation}
+
+\noindent La pérdida de energía conlleva una reducción en el radio orbitial. El periodo orbital estará gobernado por
+
+\begin{equation}
+  \Delta T(t)=\frac{\dot{P}_{\mbox{orb}}}{2P_{\mbox{orb}}}t^2
+\end{equation}
+
+\noindent en un tiempo $\tau\sim10^7-10^9$ años. 
+
+Las fases finales (\textit{inspiral}, \textit{merger}, \textit{ringdown}) son detectadas en la Tierra por interferómetros como LIGO.
+
 
 % Véase ACCRETION TURNOFF AND RAPID EVAPORATION OF VERY LIGHT SECONDARIES IN LOW-MASS X-RAY BINARIES M. Ruderman, J. Shaham, and M. Tavani

@@ -1,19 +1,21 @@
 \section{Etapa activa. El ciclo de estados espectrales}
 \subsection{Mecanismos radiativos y componentes espectrales del sistema disco-corona-\textit{jet}}
-La distribución espectral de energía de un microcuásar, desde las ondas de radio hasta los rayos $\gamma$ es el resultado de la superposición e interacción radiativa de las siguientes componentes:
+\noindent La distribución espectral de energía de un microcuásar, desde las ondas de radio hasta los rayos $\gamma$ es el resultado de la superposición e interacción radiativa de las siguientes componentes:
+
+\vspace{2em}
 
 \begin{figure}[htbp]
     \centering
     \begin{subfigure}[t]{0.4\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{XTEJ1118+480.png}
+        \includegraphics[width=\textwidth, height=4cm]{Figuras/Ciclo de estados espectrales/XTEJ1118+480.png}
         \caption{Distribución espectral de energía de XTE J1118+480 durante su estallido de 2000.}
         \label{fig:xte1118}
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{0.4\textwidth}
         \centering
-        \includegraphics[width=\textwidth]{CygnusX1_2.png}
+        \includegraphics[width=\textwidth, height=4cm]{Figuras/Ciclo de estados espectrales/CygnusX1_2.png}
         \caption{Espectro promediado en el tiempo de Cygnus X-1 obtenido con INTEGRAL durante una mini-transición de estado (estado intermedio).}
         \label{fig:cygnusx1}
     \end{subfigure}
@@ -38,7 +40,9 @@ La distribución espectral de energía de un microcuásar, desde las ondas de ra
 \end{enumerate}
 
 \subsection{Los Estados Duro y Blando (LHS y HSS)}
-Una misma fuente puede observarse habitualmente en uno de dos estados espectrales cuasi-estacionarios cuyas diferencias reflejan cambios profundos en la geometría del flujo de acreción \cite{malzac}:
+
+\noindent Una misma fuente puede observarse habitualmente en uno de dos estados espectrales cuasi-estacionarios cuyas diferencias reflejan cambios profundos en la geometría del flujo de acreción \cite{malzac}:
+
 \begin{itemize}
     \item[$\bullet$] \textbf{El Estado Alto/Blando (HSS)}. Ocurre a altas luminosidades y se caracteriza por tres propiedades fundamentales:
     \begin{enumerate}
@@ -70,11 +74,12 @@ Una misma fuente puede observarse habitualmente en uno de dos estados espectrale
 \end{itemize}
 
 \subsection{El Diagrama Dureza-Intensidad (HID) y la evolución empírica del estallido}
-La principal herramienta utilizada para describir de forma simultánea la evolución espectral de los rayos X y su acoplamiento con los flujos de salida (\textit{jets} y vientos) es el Diagrama Dureza-Intensidad (HID). Se trata de un diagrama en el cual se representan la luminosidad en rayos X en escala logarítmica en el eje de ordenadas y la dureza espectral en el de abscisas. \\
+
+\noindent La principal herramienta utilizada para describir de forma simultánea la evolución espectral de los rayos X y su acoplamiento con los flujos de salida (\textit{jets} y vientos) es el Diagrama Dureza-Intensidad (HID). Se trata de un diagrama en el cual se representan la luminosidad en rayos X en escala logarítmica en el eje de ordenadas y la dureza espectral en el de abscisas.
 
 La dureza espectral (spectral hardness) mide como de energética es la radiación de rayos X que emite un objeto celeste:
 $$\mbox{Dureza espectral} = \frac{\mbox{Rayos X de alta energía (duros)}}{\mbox{Rayos X de baja energía (blandos)}}$$
-Según la convención de Fender y Gallo, cuanto más hacia la derecha en el diagrama, estados más duros (lo que equivale a una mayor emisión de alta energía) \cite{fender_gallo}. \\
+Según la convención de Fender y Gallo, cuanto más hacia la derecha en el diagrama, estados más duros (lo que equivale a una mayor emisión de alta energía) \cite{fender_gallo}. 
 
 Durante un estallido típico, todas las fuentes transitorias recorren en sentido antihorario una trayectoria cíclica universal con forma de letra ``q'', dividida en las fases siguientes:
 \begin{itemize}
@@ -88,5 +93,70 @@ Durante un estallido típico, todas las fuentes transitorias recorren en sentido
 
 \subsection{Acoplamiento disco-corona-\textit{jet}}
 
+\paragraph{Plano Fundamental de la Actividad de los Agujeros Negros.} El análisis de ondas de radio y rayos X de fases duras y quiescentes ($A\to B, F\to A$)\cite{fender_gallo} dio lugar a la correlación no lineal entre sus luminosidades correspondientes. En efecto, se cumple que
 
-\subsection{El problema de la histéresis espectral y las propiedades de variabilidad rápida}
+\begin{equation}
+    L_r\propto L_X^{0,6-0,7}.
+\end{equation}
+
+\noindent Desde entonces, se ha demostrado que también se cumple para infrarrojos ($L_{\mbox{IR}}\propto L_X^{0,6}$). Con la consideración de la masa de agujeros negros, también se extiende a microcuásares supermasivos. Este compendio de resultados se denomina el <<Plano Fundamental de la Actividad de los Agujeros Negros>>.
+
+Para poder reconstruir la pendiente, se propone el siguiente método:
+
+\begin{enumerate}
+    \item Un \textit{jet} cónico, la luminosidad está relacionada proporcionalmente con la potencia inyectada al chorro ($P_j$). Luego
+    \begin{equation}
+        L_r\propto P_j^{1,4}
+    \end{equation}
+
+    \item Supóngase que el lanzamiento del chorro extrae una fracción constante de la potencia disponible. Se tiene que
+    \begin{equation}
+        P_j\propto \dot{M}\implies L_r\propto \dot{M}^{1,4}
+    \end{equation}
+
+    \item La eficiencia radiativa de un agujero negro es baja, proporcional a la tasa de colisones coulombianas electrón-ión, y esta a su vez a la densidad. De esta manera, la luminosidad de la corona en el rango de los rayos X es proporcional al cuadrado de la tasa de acreción. En efecto,
+    \begin{equation}
+        L_X\propto\dot{M}^2\implies\dot{M}\propto L_X^{1/2}
+    \end{equation}
+
+    \item Sustituyendo, 
+    \begin{equation}
+        L_r\propto(L_X^{1/2})^{1,4}=L_X^{0,7}
+    \end{equation}
+\end{enumerate}
+
+\noindent Se deduce que por debajo de cierta luminosidad, la potencia cinética domina a la radiación de rayos X. Sin embargo, si la binaria fuera con una estrella de neuronas, $L_X\propto\dot{M}$, que es una cantidad mucho menor. Se deduce de aquí que las estrellas de neutrones sean mucho menos luminosas que los agujeros negros, a mismo flujo de rayos X.
+
+\paragraph{\textit{Radio-loud} vs \textit{radio-quiet tracks}.} De nuevo apelando al trabajo de Fender Gallo \cite{fender_gallo}, se descubre que la relación radio/rayos X no es unívoca: en $L_X\in[10^{35},10^{38}]\mbox{ erg s}^{-1}$ hay dos pistas (ramas) de luminosidad.
+
+\begin{itemize}
+    \item \textbf{Rama superior (\textit{radio-loud}):} $L_r\propto L_X^{0,63}$ (p. ej. GX 339-4).
+    \item \textbf{Rama inferior (\textit{radio-quiet}):} $L_r\propto L_X^{0,98}$ (p.ej. H1743-322).
+\end{itemize}
+
+\noindent No hay un consenso único de la física que da lugar a este suceso. Existen dos grandes ramas: la transición a flujos de acreción radiativamente eficientes, y la recondensación de un disco frío interno débil. Independientemente, la evolución de las frecuencias de ruptura aparenta ser más compleja. 
+
+
+\subsection{Histéresis espectral. Propiedades de variabilidad rápida}
+
+\paragraph{El problema de histéresis espectral.} En los modelos de acreción existe un único parámetro externo prefijado, $\dot{M}$ \cite{malzac}. De esta manera, no debería ser posible que el flujo de acreción pudiera estar en dos estados geométricos distintos según esté subiendo o bajando. 
+
+El método para dar explicación a esto requiere añadir un segundo parámetro, que es el equilibrio de evaporación / condensación entre disco y corona. La deducción es sencilla:
+
+\begin{enumerate}
+    \item Considérese una corona advectiva caliente sobre un disco de acreción delgado y ópticamente grueso.
+    \item A grandes distancias, existe una solución de equilibrio disco-corona. Al acercarse, existe un radio crítico de transición, debajo del cual se evapora por completo el disco frío, dejando únicamente ADAF.
+    \item Durante el ascenso LHS $\to$ HSS, la evaporación domina sobre la condensación. A medida que aumenta $M$, también el radio crítico, hasta llegar a $\dot{M}_{\mbox{crit}}$. En este momento, el radio interno cae hasta $R_{\mbox{ISCO}}$.
+    \item Durante el descenso HSS $\to$ LHS, el disco frío se expande hasta $R_{\mbox{ISCO}}$. Se emite un flujo de fotones términos, que enfrían la corona por el efecto Compton inverso. Este, a su vez, mantiene el proceso de condensación. Así, el disco sobrevive hasta que $\dot{M}$ cae suficiente, cerrando el ciclo de histéresis.
+\end{enumerate}
+
+\noindent Cabe destacar que este modelo no es completo, y está sujeto a futuros cambios.
+
+\paragraph{Propiedades de variabilidad rápida.}
+
+\begin{enumerate}
+    \item \textbf{Escalas temporales:} La mayor parte de los fotones de rayos X duros aparecen en la región más profunda del pozo gravitacional. Ahí, $\tau_{\mbox{din}}\sim 1\mbox{ms}$. Sin embargo, los espectros de densidad de potencia muestran que en la realidad, la variabilidad está en el intervalo de $0,1-1\mbox{s}$.
+    \item \textbf{Retrasos temporales:} 
+    \item \textbf{No linealidad y viscosidad:}
+    \item \textbf{Parpadeo óptico:}
+\end{enumerate}
