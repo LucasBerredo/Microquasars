@@ -78,7 +78,9 @@
 \noindent La principal herramienta utilizada para describir de forma simultánea la evolución espectral de los rayos X y su acoplamiento con los flujos de salida (\textit{jets} y vientos) es el Diagrama Dureza-Intensidad (HID). Se trata de un diagrama en el cual se representan la luminosidad en rayos X en escala logarítmica en el eje de ordenadas y la dureza espectral en el de abscisas.
 
 La dureza espectral (spectral hardness) mide como de energética es la radiación de rayos X que emite un objeto celeste:
-$$\mbox{Dureza espectral} = \frac{\mbox{Rayos X de alta energía (duros)}}{\mbox{Rayos X de baja energía (blandos)}}$$
+\begin{equation}
+    \mbox{Dureza espectral} = \frac{\mbox{Rayos X de alta energía (duros)}}{\mbox{Rayos X de baja energía (blandos)}}
+\end{equation}
 Según la convención de Fender y Gallo, cuanto más hacia la derecha en el diagrama, estados más duros (lo que equivale a una mayor emisión de alta energía) \cite{fender_gallo}. 
 
 Durante un estallido típico, todas las fuentes transitorias recorren en sentido antihorario una trayectoria cíclica universal con forma de letra ``q'', dividida en las fases siguientes:
@@ -155,8 +157,11 @@ El método para dar explicación a esto requiere añadir un segundo parámetro, 
 \paragraph{Propiedades de variabilidad rápida.}
 
 \begin{enumerate}
-    \item \textbf{Escalas temporales:} La mayor parte de los fotones de rayos X duros aparecen en la región más profunda del pozo gravitacional. Ahí, $\tau_{\mbox{din}}\sim 1\mbox{ms}$. Sin embargo, los espectros de densidad de potencia muestran que en la realidad, la variabilidad está en el intervalo de $0,1-1\mbox{s}$.
-    \item \textbf{Retrasos temporales:} 
-    \item \textbf{No linealidad y viscosidad:}
-    \item \textbf{Parpadeo óptico:}
+    \item \textbf{Escalas temporales:} La mayor parte de los fotones de rayos X duros aparecen en la región más profunda del pozo gravitacional. Ahí, $\tau_{\mbox{din}}\sim 1\mbox{ms}$. Sin embargo, los espectros de densidad de potencia muestran que en la realidad, la variabilidad está en el intervalo de $0,1-10\mbox{s}$.
+    \item \textbf{Retrasos temporales:} Los fotones de rayos X duros llegan retrasados respecto a los blandos, explicado tradicionalmente como el tiempo adicional de difusión que tarda un fotón en ganar energía mediante múltiples colisiones Compton inversas en la corona, lo cual es erroneo por dos motivos:
+    \begin{itemize}
+        \item[$\bullet$] Los retrasos observados son demasiado largos, exigiendo una corona Comptonizadora ridículamente grande ($R_{\mbox{cor}}\sim 1.5\times 10^5$ km).
+        \item[$\bullet$] Supondría que la variabilidad está impulsada por fluctuaciones en la luminosidad de los fotones semilla blandos manteniendo los parámetros físicos de la corona constantes.
+    \end{itemize}
+    \item \textbf{No linealidad y viscosidad:} La no linealidad en rayos X surge porque fluctuaciones lentas de viscosidad se propagan hacia el interior aumentando la acreción y las fluctuaciones rápidas generando ruido y retrasos temporales duros (\textit{hard time-lags}) al endurecerse el espectro en el centro.
 \end{enumerate}
